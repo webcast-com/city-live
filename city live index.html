@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tailwind CSS Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Header background image */
+        .header-bg {
+            background-image: url('https://via.placeholder.com/1920x400'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Advanced Header with Background Image -->
+    <header class="header-bg text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50" alt="Logo" class="mr-2">
+                <h1 class="text-3xl font-bold">city/live</h1>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#blog" class="hover:underline">Blog</a>
+                <a href="#gallery" class="hover:underline">Gallery</a>
+                <a href="#portfolio" class="hover:underline">Portfolio</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center">
+                <input type="text" placeholder="Search..." class="p-2 rounded-l-lg border border-gray-300">
+                <button class="bg-blue-700 text-white p-2 rounded-r-lg">Search</button>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <nav class="flex flex-col space-y-2 p-4">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#blog" class="hover:underline">Blog</a>
+                <a href="#gallery" class="hover:underline">Gallery</a>
+                <a href="#portfolio" class="hover:underline">Portfolio</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section id="home" class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <h2 class="text-2xl font-semibold mb-2">Welcome to My Website</h2>
+            <p class="text-gray-700">This is a simple webpage built with Tailwind CSS. You can easily customize it using utility classes.</p>
+        </section>
+
+        <section id="about" class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <h2 class="text-2xl font-semibold mb-2">About Me</h2>
+            <p class="text-gray-700">I am a web developer who loves creating beautiful and functional websites.</p>
+        </section>
+
+        <!-- Blog Section with Grid Layout and Images -->
+        <section id="blog" class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <h2 class="text-2xl font-semibold mb-4">Blog</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 1" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 1</h3>
+                    <p class="text-gray-700">This is a brief description of the first blog post. It gives an overview of the content and entices readers to click through.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 2" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 2</h3>
+                    <p class="text-gray-700">This is a brief description of the second blog post. It provides insights and information on a specific topic.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 3" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 3</h3>
+                    <p class="text-gray-700">This is a brief description of the third blog post. It highlights key points and encourages further reading.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 4" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 4</h3>
+                    <p class="text-gray-700">This is a brief description of the fourth blog post. It provides additional insights and information.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 5</h3>
+                    <p class="text-gray-700">This is a brief description of the fifth blog post. It covers various topics of interest.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+                <article class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 6" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Blog Post Title 6</h3>
+                    <p class="text-gray-700">This is a brief description of the sixth blog post. It provides a summary of the content.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Read more</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <h2 class="text-2xl font-semibold mb-4">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 1" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 1</h3>
+                    <p class="text-gray-700">This is a description of the first gallery image. It provides context and details about the image.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 2" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 2</h3>
+                    <p class="text-gray-700">This is a description of the second gallery image. It provides context and details about the image.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 3" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 3</h3>
+                    <p class="text-gray-700">This is a description of the third gallery image. It provides context and details about the image.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 4" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 4</h3>
+                    <p class="text-gray-700">This is a description of the fourth gallery image. It provides context and details about the image.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 5" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 5</h3>
+                    <p class="text-gray-700">This is a description of the fifth gallery image. It provides context and details about the image.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Gallery Image 6" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Gallery Image Title 6</h3>
+                    <p class="text-gray-700">This is a description of the sixth gallery image. It provides context and details about the image.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">Portfolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 1" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 1</h3>
+                    <p class="text-gray-700">This is a brief description of the first project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 2" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 2</h3>
+                    <p class="text-gray-700">This is a brief description of the second project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 3" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 3</h3>
+                    <p class="text-gray-700">This is a brief description of the third project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 4" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 4</h3>
+                    <p class="text-gray-700">This is a brief description of the fourth project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 5" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 5</h3>
+                    <p class="text-gray-700">This is a brief description of the fifth project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <img src="https://via.placeholder.com/300" alt="Portfolio Project 6" loading="lazy" class="w-full h-48 object-cover rounded-t-lg mb-2">
+                    <h3 class="text-xl font-bold">Project Title 6</h3>
+                    <p class="text-gray-700">This is a brief description of the sixth project. It highlights the main features and technologies used.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 text-center">
+        <p>&copy; 2023 My Tailwind CSS Webpage</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
